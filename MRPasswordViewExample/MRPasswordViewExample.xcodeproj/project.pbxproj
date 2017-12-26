@@ -1,0 +1,343 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B074FB181FF24FB500697FBD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B074FB171FF24FB500697FBD /* AppDelegate.m */; };
+		B074FB1B1FF24FB500697FBD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B074FB1A1FF24FB500697FBD /* ViewController.m */; };
+		B074FB1E1FF24FB500697FBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B074FB1C1FF24FB500697FBD /* Main.storyboard */; };
+		B074FB201FF24FB500697FBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B074FB1F1FF24FB500697FBD /* Assets.xcassets */; };
+		B074FB231FF24FB500697FBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B074FB211FF24FB500697FBD /* LaunchScreen.storyboard */; };
+		B074FB261FF24FB500697FBD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B074FB251FF24FB500697FBD /* main.m */; };
+		B074FB2F1FF24FF100697FBD /* MRPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = B074FB2E1FF24FF100697FBD /* MRPasswordView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B074FB131FF24FB500697FBD /* MRPasswordViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MRPasswordViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B074FB161FF24FB500697FBD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B074FB171FF24FB500697FBD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B074FB191FF24FB500697FBD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B074FB1A1FF24FB500697FBD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B074FB1D1FF24FB500697FBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B074FB1F1FF24FB500697FBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B074FB221FF24FB500697FBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B074FB241FF24FB500697FBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B074FB251FF24FB500697FBD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B074FB2D1FF24FF100697FBD /* MRPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRPasswordView.h; sourceTree = "<group>"; };
+		B074FB2E1FF24FF100697FBD /* MRPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRPasswordView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B074FB101FF24FB500697FBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B074FB0A1FF24FB400697FBD = {
+			isa = PBXGroup;
+			children = (
+				B074FB151FF24FB500697FBD /* MRPasswordViewExample */,
+				B074FB141FF24FB500697FBD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B074FB141FF24FB500697FBD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B074FB131FF24FB500697FBD /* MRPasswordViewExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B074FB151FF24FB500697FBD /* MRPasswordViewExample */ = {
+			isa = PBXGroup;
+			children = (
+				B074FB2C1FF24FF100697FBD /* MRPasswordView */,
+				B074FB161FF24FB500697FBD /* AppDelegate.h */,
+				B074FB171FF24FB500697FBD /* AppDelegate.m */,
+				B074FB191FF24FB500697FBD /* ViewController.h */,
+				B074FB1A1FF24FB500697FBD /* ViewController.m */,
+				B074FB1C1FF24FB500697FBD /* Main.storyboard */,
+				B074FB1F1FF24FB500697FBD /* Assets.xcassets */,
+				B074FB211FF24FB500697FBD /* LaunchScreen.storyboard */,
+				B074FB241FF24FB500697FBD /* Info.plist */,
+				B074FB251FF24FB500697FBD /* main.m */,
+			);
+			path = MRPasswordViewExample;
+			sourceTree = "<group>";
+		};
+		B074FB2C1FF24FF100697FBD /* MRPasswordView */ = {
+			isa = PBXGroup;
+			children = (
+				B074FB2D1FF24FF100697FBD /* MRPasswordView.h */,
+				B074FB2E1FF24FF100697FBD /* MRPasswordView.m */,
+			);
+			path = MRPasswordView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B074FB121FF24FB500697FBD /* MRPasswordViewExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B074FB291FF24FB500697FBD /* Build configuration list for PBXNativeTarget "MRPasswordViewExample" */;
+			buildPhases = (
+				B074FB0F1FF24FB500697FBD /* Sources */,
+				B074FB101FF24FB500697FBD /* Frameworks */,
+				B074FB111FF24FB500697FBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MRPasswordViewExample;
+			productName = MRPasswordViewExample;
+			productReference = B074FB131FF24FB500697FBD /* MRPasswordViewExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B074FB0B1FF24FB400697FBD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = Roy;
+				TargetAttributes = {
+					B074FB121FF24FB500697FBD = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = B074FB0E1FF24FB400697FBD /* Build configuration list for PBXProject "MRPasswordViewExample" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B074FB0A1FF24FB400697FBD;
+			productRefGroup = B074FB141FF24FB500697FBD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B074FB121FF24FB500697FBD /* MRPasswordViewExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B074FB111FF24FB500697FBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B074FB231FF24FB500697FBD /* LaunchScreen.storyboard in Resources */,
+				B074FB201FF24FB500697FBD /* Assets.xcassets in Resources */,
+				B074FB1E1FF24FB500697FBD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B074FB0F1FF24FB500697FBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B074FB2F1FF24FF100697FBD /* MRPasswordView.m in Sources */,
+				B074FB1B1FF24FB500697FBD /* ViewController.m in Sources */,
+				B074FB261FF24FB500697FBD /* main.m in Sources */,
+				B074FB181FF24FB500697FBD /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B074FB1C1FF24FB500697FBD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B074FB1D1FF24FB500697FBD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B074FB211FF24FB500697FBD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B074FB221FF24FB500697FBD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B074FB271FF24FB500697FBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B074FB281FF24FB500697FBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B074FB2A1FF24FB500697FBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K68RHF34H8;
+				INFOPLIST_FILE = MRPasswordViewExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Roy.MRPasswordViewExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B074FB2B1FF24FB500697FBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K68RHF34H8;
+				INFOPLIST_FILE = MRPasswordViewExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Roy.MRPasswordViewExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B074FB0E1FF24FB400697FBD /* Build configuration list for PBXProject "MRPasswordViewExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B074FB271FF24FB500697FBD /* Debug */,
+				B074FB281FF24FB500697FBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B074FB291FF24FB500697FBD /* Build configuration list for PBXNativeTarget "MRPasswordViewExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B074FB2A1FF24FB500697FBD /* Debug */,
+				B074FB2B1FF24FB500697FBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B074FB0B1FF24FB400697FBD /* Project object */;
+}
