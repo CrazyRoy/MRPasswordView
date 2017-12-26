@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/CrazyRoy/MRPasswordView.git", :tag => "#{s.version}" }
 
-  s.source_files  = "MRBullet/**/*.{jpg,png}", "MRBullet/**/*.{h,m}"
+  s.source_files  = "MRPasswordView/**/*.{jpg,png}", "MRPasswordView/**/*.{h,m}"
 
   s.requires_arc = true
 
