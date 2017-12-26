@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
                    本着学习、研究的态度，仿制密码文本框效果；在一些已有博客进行优化，满足需求。
                    DESC
   s.homepage     = "https://github.com/CrazyRoy/MRPasswordView"
-  s.screenshots  = "https://github.com/CrazyRoy/MRPasswordView/screenshots.gif"
+  s.screenshots  = "https://github.com/CrazyRoy/MRPasswordView/blob/master/screenshots.gif"
 
   s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
