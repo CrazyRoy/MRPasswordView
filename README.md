@@ -1,4 +1,6 @@
 # MRPasswordView
+
+![screenshot](https://github.com/CrazyRoy/MRPasswordView/blob/master/screenshot.png)
  
 ### Podfile
 To integrate MRPasswordView into your Xcode project using CocoaPods, specify it in your `Podfile`:
@@ -8,7 +10,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 
 target 'TargetName' do
-pod 'MRPasswordView', '~> 0.1'
+pod 'MRPasswordView'
 end
 ```
 
