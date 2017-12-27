@@ -30,8 +30,8 @@
     // 明文
     self.passwordView.passwordType = MRPasswordTypeExpress;
     self.passwordView.marginWidth = 9.f;
-    self.passwordView.rectColor = [UIColor clearColor];
-    self.passwordView.squareBgColor = [UIColor clearColor];
+//    self.passwordView.rectColor = [UIColor clearColor];
+//    self.passwordView.squareBgColor = [UIColor clearColor];
     self.passwordView.textFont = [UIFont boldSystemFontOfSize:24.f];
     self.passwordView.passwordDelegate = self;
     self.passwordView.cursorColor = [UIColor orangeColor];
