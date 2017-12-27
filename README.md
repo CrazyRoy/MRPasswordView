@@ -23,12 +23,13 @@ $ pod install
 First:
 
 ```objc
-#import "MRPasswordView.h"
+#import <MRPasswordView/MRPasswordView.h>
 ```
 
 Then:
 
 ```objc
+// init
 MRPasswordView *passwordView = [[MRPasswordView alloc] initWithFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width-300)/2, 200, 300, 60)];
 passwordView.passwordType = MRPasswordTypeExpress;
 passwordView.marginWidth = 5.f;
@@ -39,6 +40,29 @@ passwordView.passwordDelegate = self;
 passwordView.cursorColor = [UIColor grayColor];
 [self.view addSubview:passwordView];
 
+#pragma mark - MRPasswordViewDelegate 代理
+
+/**
+ *  监听输入的改变
+ */
+- (void)passWordDidChange:(MRPasswordView *)passWord {
+    NSLog(@"======密码改变：%@",passWord.textStore);
+}
+
+/**
+ *  监听输入的完成时
+ */
+- (void)passWordCompleteInput:(MRPasswordView *)passWord {
+    NSLog(@"+++++++密码输入完成");
+}
+
+/**
+ *  监听开始输入
+ */
+- (void)passWordBeginInput:(MRPasswordView *)passWord {
+    NSLog(@"-------密码开始输入");
+}
+
 ```
 
-> so easy for you used!!!
+> so easy for you use it !!!

@@ -20,7 +20,12 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
+    UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width-300)/2, 100, 300, 30)];
+    label1.text = @"明文";
+    label1.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:label1];
     
     // 明文
     self.passwordView.passwordType = MRPasswordTypeExpress;
@@ -32,6 +37,11 @@
     self.passwordView.cursorColor = [UIColor grayColor];
     [self.view addSubview:self.passwordView];
     
+    [super viewDidLoad];
+    UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width-300)/2, 270, 300, 30)];
+    label2.text = @"密文";
+    label2.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:label2];
     // 密文
     self.passwordView2.passwordType = MRPasswordTypeCiphertext;
     self.passwordView2.marginWidth = 5.f;
@@ -48,7 +58,7 @@
 {
     if(!_passwordView)
     {
-        _passwordView = [[MRPasswordView alloc] initWithFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width-300)/2, 200, 300, 60)];
+        _passwordView = [[MRPasswordView alloc] initWithFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width-300)/2, 130, 300, 60)];
     }
     return _passwordView;
 }
@@ -89,6 +99,7 @@
 {
     [super touchesBegan:touches withEvent:event];
     
+    [self.passwordView cleanPassword];
     [self.view endEditing:YES];
 }
 

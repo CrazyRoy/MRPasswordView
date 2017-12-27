@@ -57,6 +57,15 @@ static NSString  * const KMONEYNUMBERS = @"0123456789";
 }
 
 /**
+ 清空密码框
+ */
+- (void)cleanPassword
+{
+    self.textStore = [NSMutableString string];
+    [self setNeedsDisplay];
+}
+
+/**
  设置间距
 
  @param marginWidth 间距值
