@@ -81,6 +81,10 @@ IB_DESIGNABLE
  */
 @property (strong, nonatomic) IBInspectable UIColor *rectColor;
 /**
+ 下划线颜色
+ */
+@property (strong, nonatomic) IBInspectable UIColor *underlineColor;
+/**
  方块的背景颜色
  */
 @property (strong, nonatomic) IBInspectable UIColor *squareBgColor;

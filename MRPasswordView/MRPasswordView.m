@@ -46,11 +46,11 @@ static NSString  * const KMONEYNUMBERS = @"0123456789";
 {
     self.backgroundColor = [UIColor clearColor];
     self.textStore = [NSMutableString string];
-    self.squareWidth = 50;
     self.passWordNum = 6;
     self.pointRadius = 6;
     self.cursorWidth = 1.5f;
-    self.rectColor = [UIColor colorWithRed:51.0/255.0 green:51.0/255.0 blue:51.0/255.0 alpha:1.0];
+    self.rectColor = [UIColor clearColor];
+    self.underlineColor = [UIColor clearColor];
     self.contentColor = [UIColor blackColor];
     self.cursorColor = self.rectColor;
     [self becomeFirstResponder];
@@ -74,6 +74,7 @@ static NSString  * const KMONEYNUMBERS = @"0123456789";
 {
     _marginWidth = marginWidth;
     self.squareWidth = (self.frame.size.width - (self.passWordNum+1)*_marginWidth)/self.passWordNum;
+    NSLog(@"width: %f", self.squareWidth);
     [self setNeedsDisplay];
 }
 
@@ -161,11 +162,13 @@ static NSString  * const KMONEYNUMBERS = @"0123456789";
 - (void)drawRect:(CGRect)rect {
     CGFloat height = rect.size.height;
     CGFloat width = rect.size.width;
-    CGFloat x = (width - self.squareWidth*self.passWordNum)/2.0;
-    CGFloat y = (height - self.squareWidth)/2.0;
+    CGFloat x = self.marginWidth/2.0;
+    CGFloat y = self.marginWidth/2.0;
+    CGFloat squareHeight = height - self.marginWidth;
     CGContextRef context = UIGraphicsGetCurrentContext();
+    
     //画外框
-    CGContextAddRect(context, CGRectMake( x, y, self.squareWidth*self.passWordNum, self.squareWidth));
+    CGContextAddRect(context, CGRectMake(x, y, width - self.marginWidth, squareHeight));
     CGContextSetLineWidth(context, self.marginWidth);
     CGContextSetStrokeColorWithColor(context, self.rectColor.CGColor);
     CGContextSetFillColorWithColor(context, self.squareBgColor.CGColor);
@@ -173,10 +176,20 @@ static NSString  * const KMONEYNUMBERS = @"0123456789";
     
     //画竖条
     for (int i = 1; i < self.passWordNum; i++) {
-        CGContextMoveToPoint(context, x+i*self.squareWidth, y);
-        CGContextAddLineToPoint(context, x+i*self.squareWidth, y+self.squareWidth);
+        CGContextMoveToPoint(context, x+i*(self.squareWidth+self.marginWidth), y);
+        CGContextAddLineToPoint(context, x+i*(self.squareWidth+self.marginWidth), y+squareHeight);
         CGContextSetLineWidth(context, self.marginWidth);
         CGContextSetStrokeColorWithColor(context, self.rectColor.CGColor);
+        CGContextDrawPath(context, kCGPathFillStroke);
+    }
+    
+    //画下划线
+    for (int i = 0; i < self.passWordNum; i++)
+    {
+        CGContextMoveToPoint(context, self.marginWidth + i*(self.squareWidth+self.marginWidth), y+squareHeight);
+        CGContextAddLineToPoint(context, self.marginWidth + i*(self.squareWidth+self.marginWidth) + self.squareWidth, y+squareHeight);
+        CGContextSetLineWidth(context, 1.f);
+        CGContextSetStrokeColorWithColor(context, self.underlineColor.CGColor);
         CGContextDrawPath(context, kCGPathFillStroke);
     }
     
@@ -200,13 +213,14 @@ static NSString  * const KMONEYNUMBERS = @"0123456789";
                                                  };
                     //获得size
                     CGSize strSize = [str sizeWithAttributes:attributes];
-                    if(strSize.width > self.squareWidth || strSize.height > self.squareWidth)
+                    if(strSize.width > self.squareWidth || strSize.height > squareHeight)
                     {
-                        strSize = CGSizeMake(self.squareWidth, self.squareWidth);
+                        strSize = CGSizeMake(self.squareWidth, squareHeight);
                     }
-                    CGFloat marginTop = (self.squareWidth - strSize.height)/2;
-                    //垂直居中要自己计算
-                    CGRect rect = CGRectMake(x + (i-1)*self.squareWidth + self.squareWidth*0.5 - strSize.width*0.5, y + marginTop, strSize.width, strSize.height);
+                
+                    CGFloat marginTop = (height-2*self.marginWidth-strSize.height)/2;
+                    
+                    CGRect rect = CGRectMake(x*2 + (i-1)*(self.squareWidth + self.marginWidth) + self.squareWidth*0.5 - strSize.width*0.5, y*2 + marginTop, strSize.width, strSize.height);
                     [str drawInRect:rect withAttributes:attributes];
                 }
             }
@@ -214,7 +228,7 @@ static NSString  * const KMONEYNUMBERS = @"0123456789";
         case MRPasswordTypeCiphertext:
             {
                 for (int i = 1; i <= self.textStore.length; i++) {
-                    CGContextAddArc(context,  x+i*self.squareWidth - self.squareWidth/2.0, y+self.squareWidth/2, self.pointRadius, 0, M_PI*2, YES);
+                    CGContextAddArc(context, x*2 + (i-1)*(self.squareWidth + self.marginWidth) + self.squareWidth*0.5, height/2, self.pointRadius, 0, M_PI*2, YES);
                     CGContextSetFillColorWithColor(context, self.contentColor.CGColor);
                     CGContextDrawPath(context, kCGPathFill);
                 }
@@ -230,8 +244,8 @@ static NSString  * const KMONEYNUMBERS = @"0123456789";
         NSInteger index = self.textStore.length;
         if(index >= 0)
         {
-            CGContextMoveToPoint(context, x + self.squareWidth*index + (self.squareWidth*0.5 - self.cursorWidth*0.5), y+self.squareWidth*0.25);
-            CGContextAddLineToPoint(context, x + self.squareWidth*index + (self.squareWidth*0.5 - self.cursorWidth*0.5), y+self.squareWidth*0.75);
+            CGContextMoveToPoint(context, x*2 + index*(self.squareWidth + self.marginWidth) + self.squareWidth*0.5 - self.cursorWidth*0.5, y+squareHeight*0.25);
+            CGContextAddLineToPoint(context, x*2 + index*(self.squareWidth + self.marginWidth) + self.squareWidth*0.5 - self.cursorWidth*0.5, y+squareHeight*0.75);
             CGContextSetLineWidth(context, self.cursorWidth);
             CGContextSetStrokeColorWithColor(context, self.cursorColor.CGColor);
             CGContextClosePath(context);

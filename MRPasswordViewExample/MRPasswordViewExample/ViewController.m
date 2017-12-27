@@ -29,12 +29,14 @@
     
     // 明文
     self.passwordView.passwordType = MRPasswordTypeExpress;
-    self.passwordView.marginWidth = 5.f;
-    self.passwordView.rectColor = [UIColor grayColor];
-    self.passwordView.squareBgColor = [UIColor whiteColor];
-    self.passwordView.textFont = [UIFont systemFontOfSize:20.f];
+    self.passwordView.marginWidth = 9.f;
+    self.passwordView.rectColor = [UIColor clearColor];
+    self.passwordView.squareBgColor = [UIColor clearColor];
+    self.passwordView.textFont = [UIFont boldSystemFontOfSize:24.f];
     self.passwordView.passwordDelegate = self;
-    self.passwordView.cursorColor = [UIColor grayColor];
+    self.passwordView.cursorColor = [UIColor orangeColor];
+    self.passwordView.cursorWidth = 2.f;
+    self.passwordView.underlineColor = [UIColor blackColor];
     [self.view addSubview:self.passwordView];
     
     [super viewDidLoad];
@@ -58,7 +60,7 @@
 {
     if(!_passwordView)
     {
-        _passwordView = [[MRPasswordView alloc] initWithFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width-300)/2, 130, 300, 60)];
+        _passwordView = [[MRPasswordView alloc] initWithFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width-350)/2, 130, 350, 60)];
     }
     return _passwordView;
 }
