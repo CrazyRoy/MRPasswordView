@@ -53,7 +53,7 @@ static NSString  * const KMONEYNUMBERS = @"0123456789";
     self.underlineColor = [UIColor clearColor];
     self.squareBgColor = [UIColor clearColor];
     self.contentColor = [UIColor blackColor];
-    self.cursorColor = self.rectColor;
+    self.cursorColor = [UIColor blackColor];
     [self becomeFirstResponder];
 }
 
