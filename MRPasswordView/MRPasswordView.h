@@ -107,4 +107,9 @@ IB_DESIGNABLE
  */
 @property (assign, nonatomic) MRPasswordType passwordType;
 
+/**
+ 清空密码框
+ */
+- (void)cleanPassword;
+
 @end
