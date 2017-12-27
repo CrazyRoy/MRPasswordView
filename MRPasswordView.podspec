@@ -2,12 +2,13 @@
 Pod::Spec.new do |s|
 
   s.name         = "MRPasswordView"
-  s.version      = "0.2"
+  s.version      = "0.3"
   s.summary      = "仿支付宝支付密码文本框效果."
   s.description  = <<-DESC
                    本着学习、研究的态度，仿制密码文本框效果；在一些已有博客进行优化，满足需求。
-                   V 1.0 第一版；
-                   V 2.0 第二版: 增加清除密码方法；
+                   V 1.0 init；
+                   V 2.0 增加清除密码方法；
+                   V 3.0 修改；
                    DESC
   s.homepage     = "https://github.com/CrazyRoy/MRPasswordView"
   s.screenshots  = "https://github.com/CrazyRoy/MRPasswordView/blob/master/screenshot.png"
