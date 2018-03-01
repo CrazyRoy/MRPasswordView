@@ -111,7 +111,13 @@ static NSString  * const KMONEYNUMBERS = @"0123456789";
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     if (![self isFirstResponder]) {
         [self becomeFirstResponder];
+        [self setNeedsDisplay];
     }
+}
+
+- (void)refreshUI
+{
+    [self setNeedsDisplay];
 }
 
 #pragma mark - UIKeyInput
@@ -159,6 +165,9 @@ static NSString  * const KMONEYNUMBERS = @"0123456789";
     [self setNeedsDisplay];
 }
 
+#define UIColorHex(rgbValue)                [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16)) / 255.0 green:((float)((rgbValue & 0xFF00) >> 8)) / 255.0 blue:((float)(rgbValue & 0xFF)) / 255.0 alpha:1.0]
+
+
 // Only override drawRect: if you perform custom drawing.
 - (void)drawRect:(CGRect)rect {
     CGFloat height = rect.size.height;
@@ -190,7 +199,13 @@ static NSString  * const KMONEYNUMBERS = @"0123456789";
         CGContextMoveToPoint(context, self.marginWidth + i*(self.squareWidth+self.marginWidth), y+squareHeight);
         CGContextAddLineToPoint(context, self.marginWidth + i*(self.squareWidth+self.marginWidth) + self.squareWidth, y+squareHeight);
         CGContextSetLineWidth(context, 1.f);
-        CGContextSetStrokeColorWithColor(context, self.underlineColor.CGColor);
+        if (self.textStore.length>=i)
+        {
+            CGContextSetStrokeColorWithColor(context, UIColorHex(0x333333).CGColor);
+        }
+        else{
+            CGContextSetStrokeColorWithColor(context, UIColorHex(0xCCCCCC).CGColor);
+        }
         CGContextDrawPath(context, kCGPathFillStroke);
     }
     
@@ -205,7 +220,7 @@ static NSString  * const KMONEYNUMBERS = @"0123456789";
                     textStyle.lineBreakMode = NSLineBreakByWordWrapping;
                     textStyle.alignment = NSTextAlignmentCenter;//水平居中
                     //字体
-                    UIFont *font = self.textFont ? self.textFont : [UIFont systemFontOfSize:[UIFont systemFontSize]];
+                    UIFont *font = [UIFont boldSystemFontOfSize:24.f];
                     //构建属性集合
                     NSDictionary *attributes = @{
                                                  NSFontAttributeName:font,
@@ -242,6 +257,10 @@ static NSString  * const KMONEYNUMBERS = @"0123456789";
     //画光标
     if(self.textStore.length < self.passWordNum)
     {
+        if (![self isFirstResponder])
+        {
+            return;
+        }
         NSInteger index = self.textStore.length;
         if(index >= 0)
         {

@@ -116,4 +116,6 @@ IB_DESIGNABLE
  */
 - (void)cleanPassword;
 
+- (void)refreshUI;
+
 @end
